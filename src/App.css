@@ -1,0 +1,6 @@
+.carouselContainer {
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-black-twill-texture-gradient-banner-background-textureblack-gradientblack-backgroundgradient-image_83287.jpg");
+    background-size: cover;
+}

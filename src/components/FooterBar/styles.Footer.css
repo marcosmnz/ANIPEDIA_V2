@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&family=Poppins:wght@400;700&display=swap');
+
+.footerContainer {
+  background-color: grey;
+  display: flex;
+  margin-top: 150px;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footerItem {
+    color: white;
+  margin: 0px 20px;
+}
+.anipediaTextFooter {
+    margin: 0px 16px !important;
+}
+.footerText {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
