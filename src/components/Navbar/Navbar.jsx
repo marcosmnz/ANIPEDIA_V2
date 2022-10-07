@@ -17,7 +17,6 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 import "./styles.Navbar.css";
 import { useState, useEffect } from "react";
-import Link from '@mui/material/Link';
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -44,7 +43,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "white",
   "& .MuiInputBase-input": {
     padding: theme.spacing(3, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create("width"),
     width: "100%",
@@ -59,10 +57,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const pages = [{
   name: 'Manga',
-  to: '/?topic=anime'
+  to: '/home/manga'
 }, {
   name: 'Characters',
-  to: '/?topic=characters'
+  to: '/home/characters'
 }];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -108,7 +106,7 @@ const NavbarAP = ({ searching, searchValue }) => {
               variant="h6"
               noWrap
               component="a"
-              href="/"
+              href="/home"
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
@@ -158,8 +156,10 @@ const NavbarAP = ({ searching, searchValue }) => {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem onClick={handleCloseNavMenu}>
-                    <Typography to={page.to} textAlign="center">{page.name}</Typography>
+                  <MenuItem>
+                  <Button href={page.to} onClick={handleCloseNavMenu}>
+                    <Typography key={page.name.toLowerCase()} to={page.to} textAlign="center">{page.name}</Typography>
+                  </Button>
                   </MenuItem>
                 ))}
               </Menu>
@@ -186,7 +186,7 @@ const NavbarAP = ({ searching, searchValue }) => {
               variant="h5"
               noWrap
               component="a"
-              href=""
+              href="/home"
               sx={{
                 mr: 2,
                 display: { xs: "flex", md: "none" },
@@ -205,11 +205,12 @@ const NavbarAP = ({ searching, searchValue }) => {
               {pages.map((page) => (
                 <Button
                 to={page.to}
+                href={page.to}
                   key={page.name.toLowerCase()}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
-                  <Link href={page.to}>{page.name}</Link>
+                  <Typography href={page.to}>{page.name}</Typography>
                 </Button>
               ))}
               <Search>
