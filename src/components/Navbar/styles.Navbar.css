@@ -10,3 +10,6 @@
 .MuiList-root {
   background-color: white !important;
 }
+.searchInput {
+  width: 120px;
+}

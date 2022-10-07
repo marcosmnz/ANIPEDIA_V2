@@ -183,6 +183,7 @@ const NavbarAP = ({ searching, searchValue }) => {
               }}
             />
             <Typography
+              className="anipediaLogo"
               variant="h5"
               noWrap
               component="a"
@@ -218,6 +219,7 @@ const NavbarAP = ({ searching, searchValue }) => {
                   <SearchIcon />
                 </SearchIconWrapper>
                 <StyledInputBase
+                  className="searchInput"
                   value={search}
                   onChange={handleSearch}
                   placeholder="Search…"
