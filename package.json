@@ -1,9 +1,12 @@
 {
+  "homepage":"https://github.com/marcosmnz/ANIPEDIA_V2"
   "name": "anipediav2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
