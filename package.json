@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    package.json: "react-scripts build && echo '/* /index.html 200' | cat >build/_redirects ",
     "preview": "vite preview"
   },
   "dependencies": {
