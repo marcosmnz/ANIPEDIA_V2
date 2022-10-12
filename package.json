@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "react-scripts build && echo '/* /index.html 200' | cat >build/_redirects ",
     "preview": "vite preview"
   },
   "dependencies": {
